@@ -1,0 +1,14 @@
+<h1> {{todoListController.todoList.title}}</h1>
+
+<label for="">New</label>
+<input type="text" ng-model='todoListController.task'>
+<button type="button" ng-click="todoListController.newTask()">Add</button>
+
+
+<ul>
+  <li
+    ng-repeat='task in todoListController.todoList.tasks'
+    ng-click='todoListController.delete(task)'>
+      {{task}}
+  </li>
+</ul>

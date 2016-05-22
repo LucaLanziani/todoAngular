@@ -1,0 +1,13 @@
+<div class="user">
+  <input ng-model="userController.listTitle">
+  <button ng-click="userController.newList()"> New List </button> 
+  
+  <div class="user user-{{userController.user.id}}">
+    name: {{userController.user.name}}
+  </div>
+  <ul>
+    <li ng-repeat="list in userController.user.lists">
+      <a ng-href="#/user/{{userController.user.id}}/list/{{list.id}}">{{list.title}}</a>
+    </li>
+  </ul>
+</div>

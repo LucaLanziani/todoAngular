@@ -1,0 +1,6 @@
+<input type="text" ng-model="usersController.search" class="search-query" id="projects_search" placeholder="search">
+<ul>
+  <li ng-repeat="user in usersController.users | filter:usersController.search | orderBy:'name'">
+      <a ng-href="#/user/{{user.id}}">{{user.name}}</a>
+  </li>
+</ul>
