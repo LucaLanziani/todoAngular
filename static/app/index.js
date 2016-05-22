@@ -1,5 +1,3 @@
-var DOMAIN = 'http://06d59733.ngrok.io';
-
 angular.module('project', ['ngRoute', 'UsersService', 'TodoListService'])
 
 .config(function($routeProvider) {
@@ -8,13 +6,13 @@ angular.module('project', ['ngRoute', 'UsersService', 'TodoListService'])
       return Users.list();
     }
   };
-  
+
   var resolveUser = {
     user: function (Users, $route) {
       return Users.get($route.current.params.userId)
     }
   }
-  
+
   var resolveTodoList = {
     todoList: function (TodoList, $route) {
       return TodoList.fetch($route.current.params.userId, $route.current.params.listId);
@@ -23,8 +21,8 @@ angular.module('project', ['ngRoute', 'UsersService', 'TodoListService'])
       return $route.current.params.userId
     }
   }
-  
- 
+
+
   $routeProvider
     .when('/', {
       controller:'UsersController as usersController',
