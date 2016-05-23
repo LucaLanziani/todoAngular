@@ -27,7 +27,7 @@ var listsCount = 2;
 
 function findById(collection, id) {
     var item = collection.filter(function (item) {
-        return item.id === id;
+        return item.id == id;
     })[0];
 
     return item;
