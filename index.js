@@ -5,7 +5,7 @@ var app = express();
 app.use(bodyParser.json());
 app.use(express.static(__dirname + '/static'));
 
-const users = [{
+var users = [{
     id: 1,
     name: 'Matteo',
     lists: [{
